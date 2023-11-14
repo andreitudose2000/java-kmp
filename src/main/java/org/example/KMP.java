@@ -1,5 +1,7 @@
 package org.example;
 
+import lombok.Generated;
+
 import java.util.ArrayList;
 
 public class KMP {
@@ -15,7 +17,7 @@ public class KMP {
         var m = pattern.length();
         var n = text.length();
 
-        if (m > n) {
+        if (m == 0 || n == 0 || m > n) {
             return new int[0];
         }
 
@@ -77,6 +79,7 @@ public class KMP {
         return lps_array;
     }
 
+    @Generated
     public static void main(String[] args)
     {
         // exemplu:

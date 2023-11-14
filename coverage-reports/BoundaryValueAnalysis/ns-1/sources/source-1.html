@@ -1,0 +1,196 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > KMP</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.example</a>
+</div>
+
+<h1>Coverage Summary for Class: KMP (org.example)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">KMP</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    89.7%
+  </span>
+  <span class="absValue">
+    (35/39)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.example;
+&nbsp;
+&nbsp;import lombok.Generated;
+&nbsp;
+&nbsp;import java.util.ArrayList;
+&nbsp;
+<b class="nc">&nbsp;public class KMP {</b>
+&nbsp;    public static int[] findAllOccurrences(String text, String pattern)
+&nbsp;    {
+<b class="fc">&nbsp;        if (text == null) {</b>
+<b class="nc">&nbsp;            throw new IllegalArgumentException(&quot;Text can not be null&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (pattern == null) {</b>
+<b class="nc">&nbsp;            throw new IllegalArgumentException(&quot;Pattern can not be null&quot;);</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        var m = pattern.length();</b>
+<b class="fc">&nbsp;        var n = text.length();</b>
+&nbsp;
+<b class="fc">&nbsp;        if (m == 0 || n == 0 || m &gt; n) {</b>
+<b class="fc">&nbsp;            return new int[0];</b>
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        var lpsArray = getLPSArray(pattern);</b>
+&nbsp;
+<b class="fc">&nbsp;        var foundAt = new ArrayList&lt;Integer&gt;();</b>
+&nbsp;
+<b class="fc">&nbsp;        int textIndex = 0, patternIndex = 0;</b>
+<b class="fc">&nbsp;        while ((m - patternIndex) &lt;= (n - textIndex)) {</b>
+<b class="fc">&nbsp;            if (pattern.charAt(patternIndex) == text.charAt(textIndex)) {</b>
+<b class="fc">&nbsp;                patternIndex += 1;</b>
+<b class="fc">&nbsp;                textIndex += 1;</b>
+&nbsp;            }
+<b class="fc">&nbsp;            if (patternIndex == m) {</b>
+<b class="fc">&nbsp;                foundAt.add(textIndex - patternIndex);</b>
+<b class="fc">&nbsp;                patternIndex = lpsArray[patternIndex - 1];</b>
+&nbsp;            }
+&nbsp;
+<b class="fc">&nbsp;            else if (textIndex &lt; n &amp;&amp; pattern.charAt(patternIndex) != text.charAt(textIndex)) {</b>
+<b class="fc">&nbsp;                if (patternIndex != 0) {</b>
+<b class="fc">&nbsp;                    patternIndex = lpsArray[patternIndex - 1];</b>
+&nbsp;                }
+&nbsp;                else {
+<b class="fc">&nbsp;                    textIndex += 1;</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return foundAt.stream().mapToInt(Number::intValue).toArray();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    private static int[] getLPSArray(String pattern) {
+<b class="fc">&nbsp;        int m = pattern.length();</b>
+&nbsp;
+<b class="fc">&nbsp;        int[] lps_array = new int[m];</b>
+<b class="fc">&nbsp;        lps_array[0] = 0;</b>
+&nbsp;
+<b class="fc">&nbsp;        int suffix_length = 0;</b>
+<b class="fc">&nbsp;        int index = 1;</b>
+&nbsp;
+<b class="fc">&nbsp;        while (index &lt; m) {</b>
+<b class="fc">&nbsp;            if (pattern.charAt(index) == pattern.charAt(suffix_length)) {</b>
+<b class="fc">&nbsp;                suffix_length++;</b>
+<b class="fc">&nbsp;                lps_array[index] = suffix_length;</b>
+<b class="fc">&nbsp;                index++;</b>
+&nbsp;            }
+&nbsp;            else
+&nbsp;            {
+<b class="fc">&nbsp;                if (suffix_length != 0) {</b>
+<b class="nc">&nbsp;                    suffix_length = lps_array[suffix_length - 1];</b>
+&nbsp;                }
+&nbsp;                else {
+<b class="fc">&nbsp;                    lps_array[index] = suffix_length;</b>
+<b class="fc">&nbsp;                    index++;</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+&nbsp;
+<b class="fc">&nbsp;        return lps_array;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Generated
+&nbsp;    public static void main(String[] args)
+&nbsp;    {
+&nbsp;        // exemplu:
+&nbsp;
+&nbsp;        int[] result = KMP.findAllOccurrences(&quot;dsx&quot;, &quot;dsxdfafefaedsxeraedsx&quot;);
+&nbsp;        for (int index : result) {
+&nbsp;            System.out.println(index);
+&nbsp;        }
+&nbsp;    }
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-11-14 22:37</div>
+</div>
+</body>
+</html>
