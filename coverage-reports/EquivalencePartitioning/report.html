@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)file:///D:/1imp/CursuriFMI/Master2/Sem1/Testare/java-kmp/coverage-reports/EquivalencePartitioning/ns-1/sources/source-1.html -->
+<html id="htmlId"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Coverage Report &gt; KMP</title>
+  <style type="text/css">
+    /*
+ * Copyright 2000-2021 JetBrains s.r.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: helvetica neue, tahoma, arial, sans-serif;
+  font-size: 82%;
+  color: #151515;
+}
+
+h1 {
+  margin: 0.5em 0;
+  color: #010101;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+h2 {
+  margin: 0.5em 0;
+  color: #010101;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+a {
+  color: #1564C2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+span.separator {
+  color: #9BA9BA;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+div.content {
+  width: 99%;
+}
+
+table.coverageStats {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.overallStats {
+  width: 20%;
+}
+
+table.coverageStats td, table.coverageStats th {
+  padding: 4px 2px;
+  border-bottom: 1px solid #ccc;
+}
+
+table.coverageStats th {
+  background-color: #959BA4;
+  border: none;
+  font-weight: bold;
+  text-align: left;
+  color: #FFF;
+}
+
+table.coverageStats th.coverageStat {
+  width: 15%;
+}
+
+table.coverageStats th a {
+  color: #FFF;
+}
+
+table.coverageStats th a:hover {
+  text-decoration: none;
+}
+
+table.coverageStats th.sortedDesc a {
+  background: url(../img/arrowDown.gif) no-repeat 100% 2px;
+  padding-right: 20px;
+}
+
+table.coverageStats th.sortedAsc a {
+  background: url(../img/arrowUp.gif) no-repeat 100% 2px;
+  padding-right: 20px;
+}
+
+div.footer {
+  margin: 2em .5em;
+  font-size: 85%;
+  text-align: left;
+  line-height: 140%;
+}
+
+code.sourceCode {
+  width: 100%;
+  border: 1px solid #ccc;
+  font: normal 12px 'Menlo', 'Bitstream Vera Sans Mono', 'Courier New', 'Courier', monospace;
+  white-space: pre;
+}
+
+code.sourceCode b {
+  font-weight: normal;
+}
+
+code.sourceCode span.number {
+  color: #151515;
+}
+
+code.sourceCode .fc {
+  background-color: #cfc;
+}
+
+code.sourceCode .pc {
+  background-color: #ffc;
+}
+
+code.sourceCode .nc {
+  background-color: #fcc;
+}
+
+.percent, .absValue {
+  font-size: 90%;
+}
+
+.percent .green, .absValue .green {
+  color: #32cc32;
+}
+
+.percent .red, .absValue .red {
+  color: #f00;
+}
+
+.percent .totalDiff {
+  color: #3f3f3f;
+}
+
+/*
+ * Copyright 2000-2021 JetBrains s.r.o.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Intellij Idea-like styling (c) Vasily Polovnyov <vast@whiteants.net>
+*/
+
+.hljs {
+    color: #000;
+    background: #fff;
+}
+
+.hljs-subst,
+.hljs-title {
+    font-weight: normal;
+    color: #000;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #808080;
+    font-style: italic;
+}
+
+.hljs-meta {
+    color: #808000;
+}
+
+.hljs-tag {
+    background: #efefef;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type,
+.hljs-selector-id,
+.hljs-selector-class {
+    font-weight: bold;
+    color: #000080;
+}
+
+.hljs-attribute,
+.hljs-number,
+.hljs-regexp,
+.hljs-link {
+    font-weight: bold;
+    color: #0000ff;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-link {
+    font-weight: normal;
+}
+
+.hljs-string {
+    color: #008000;
+    font-weight: bold;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-formula {
+    color: #000;
+    background: #d0eded;
+    font-style: italic;
+}
+
+.hljs-doctag {
+    text-decoration: underline;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+    color: #660e7a;
+}
+
+.hljs-addition {
+    background: #baeeba;
+}
+
+.hljs-deletion {
+    background: #ffc8bd;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-ln-numbers {
+    display: block;
+    float: left;
+    width: 3em;
+    border-right: 1px solid #ccc;
+    font-style: normal;
+    text-align: right;
+    background-color: #eee;
+}
+
+  </style>
+  <script type="text/javascript" src="./report_files/highlight.min.js.download"></script>
+  <script type="text/javascript" src="./report_files/highlightjs-line-numbers.min.js.download"></script><style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="file:///D:/1imp/CursuriFMI/Master2/Sem1/Testare/java-kmp/coverage-reports/EquivalencePartitioning/index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="file:///D:/1imp/CursuriFMI/Master2/Sem1/Testare/java-kmp/coverage-reports/EquivalencePartitioning/ns-1/index.html">org.example</a>
+</div>
+
+<h1>Coverage Summary for Class: KMP (org.example)</h1>
+
+<table class="coverageStats">
+<tbody><tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">KMP</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66.7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92.3%
+  </span>
+  <span class="absValue">
+    (36/39)
+  </span>
+</td>
+</tr>
+
+</tbody></table>
+
+<br>
+<br>
+
+
+<pre><code class="sourceCode hljs java" id="sourceCode"><table class="hljs-ln"><tbody><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="1"><div class="hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="1">&nbsp;<span class="hljs-keyword">package</span> org.example;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="2"><div class="hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="2">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="3"><div class="hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="3">&nbsp;<span class="hljs-keyword">import</span> lombok.Generated;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="4"><div class="hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="4">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="5"><div class="hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="5">&nbsp;<span class="hljs-keyword">import</span> java.util.ArrayList;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="6"><div class="hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="6">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="7"><div class="hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="7"><b class="nc">&nbsp;<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KMP</span> </span>{</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="8"><div class="hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="8">&nbsp;    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] findAllOccurrences(String text, String pattern)</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="9"><div class="hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="9">&nbsp;    {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="10"><div class="hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="10"><b class="fc">&nbsp;        <span class="hljs-keyword">if</span> (text == <span class="hljs-keyword">null</span>) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="11"><div class="hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="11"><b class="fc">&nbsp;            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"Text can not be null"</span>);</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="12"><div class="hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="12">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="13"><div class="hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="13"><b class="fc">&nbsp;        <span class="hljs-keyword">if</span> (pattern == <span class="hljs-keyword">null</span>) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="14"><div class="hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="14"><b class="fc">&nbsp;            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">"Pattern can not be null"</span>);</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="15"><div class="hljs-ln-n" data-line-number="15"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="15">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="16"><div class="hljs-ln-n" data-line-number="16"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="16">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="17"><div class="hljs-ln-n" data-line-number="17"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="17"><b class="fc">&nbsp;        <span class="hljs-keyword">var</span> m = pattern.length();</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="18"><div class="hljs-ln-n" data-line-number="18"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="18"><b class="fc">&nbsp;        <span class="hljs-keyword">var</span> n = text.length();</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="19"><div class="hljs-ln-n" data-line-number="19"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="19">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="20"><div class="hljs-ln-n" data-line-number="20"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="20"><b class="fc">&nbsp;        <span class="hljs-keyword">if</span> (m == <span class="hljs-number">0</span> || n == <span class="hljs-number">0</span> || m &gt; n) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="21"><div class="hljs-ln-n" data-line-number="21"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="21"><b class="nc">&nbsp;            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">0</span>];</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="22"><div class="hljs-ln-n" data-line-number="22"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="22">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="23"><div class="hljs-ln-n" data-line-number="23"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="23">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="24"><div class="hljs-ln-n" data-line-number="24"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="24"><b class="fc">&nbsp;        <span class="hljs-keyword">var</span> lpsArray = getLPSArray(pattern);</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="25"><div class="hljs-ln-n" data-line-number="25"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="25">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="26"><div class="hljs-ln-n" data-line-number="26"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="26"><b class="fc">&nbsp;        <span class="hljs-keyword">var</span> foundAt = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="27"><div class="hljs-ln-n" data-line-number="27"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="27">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="28"><div class="hljs-ln-n" data-line-number="28"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="28"><b class="fc">&nbsp;        <span class="hljs-keyword">int</span> textIndex = <span class="hljs-number">0</span>, patternIndex = <span class="hljs-number">0</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="29"><div class="hljs-ln-n" data-line-number="29"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="29"><b class="fc">&nbsp;        <span class="hljs-keyword">while</span> ((m - patternIndex) &lt;= (n - textIndex)) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="30"><div class="hljs-ln-n" data-line-number="30"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="30"><b class="fc">&nbsp;            <span class="hljs-keyword">if</span> (pattern.charAt(patternIndex) == text.charAt(textIndex)) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="31"><div class="hljs-ln-n" data-line-number="31"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="31"><b class="fc">&nbsp;                patternIndex += <span class="hljs-number">1</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="32"><div class="hljs-ln-n" data-line-number="32"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="32"><b class="fc">&nbsp;                textIndex += <span class="hljs-number">1</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="33"><div class="hljs-ln-n" data-line-number="33"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="33">&nbsp;            }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="34"><div class="hljs-ln-n" data-line-number="34"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="34"><b class="fc">&nbsp;            <span class="hljs-keyword">if</span> (patternIndex == m) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="35"><div class="hljs-ln-n" data-line-number="35"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="35"><b class="fc">&nbsp;                foundAt.add(textIndex - patternIndex);</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="36"><div class="hljs-ln-n" data-line-number="36"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="36"><b class="fc">&nbsp;                patternIndex = lpsArray[patternIndex - <span class="hljs-number">1</span>];</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="37"><div class="hljs-ln-n" data-line-number="37"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="37">&nbsp;            }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="38"><div class="hljs-ln-n" data-line-number="38"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="38">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="39"><div class="hljs-ln-n" data-line-number="39"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="39"><b class="fc">&nbsp;            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (textIndex &lt; n &amp;&amp; pattern.charAt(patternIndex) != text.charAt(textIndex)) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="40"><div class="hljs-ln-n" data-line-number="40"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="40"><b class="fc">&nbsp;                <span class="hljs-keyword">if</span> (patternIndex != <span class="hljs-number">0</span>) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="41"><div class="hljs-ln-n" data-line-number="41"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="41"><b class="fc">&nbsp;                    patternIndex = lpsArray[patternIndex - <span class="hljs-number">1</span>];</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="42"><div class="hljs-ln-n" data-line-number="42"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="42">&nbsp;                }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="43"><div class="hljs-ln-n" data-line-number="43"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="43">&nbsp;                <span class="hljs-keyword">else</span> {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="44"><div class="hljs-ln-n" data-line-number="44"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="44"><b class="fc">&nbsp;                    textIndex += <span class="hljs-number">1</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="45"><div class="hljs-ln-n" data-line-number="45"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="45">&nbsp;                }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="46"><div class="hljs-ln-n" data-line-number="46"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="46">&nbsp;            }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="47"><div class="hljs-ln-n" data-line-number="47"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="47">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="48"><div class="hljs-ln-n" data-line-number="48"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="48">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="49"><div class="hljs-ln-n" data-line-number="49"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="49"><b class="fc">&nbsp;        <span class="hljs-keyword">return</span> foundAt.stream().mapToInt(Number::intValue).toArray();</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="50"><div class="hljs-ln-n" data-line-number="50"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="50">&nbsp;    }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="51"><div class="hljs-ln-n" data-line-number="51"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="51">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="52"><div class="hljs-ln-n" data-line-number="52"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="52">&nbsp;    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] getLPSArray(String pattern) {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="53"><div class="hljs-ln-n" data-line-number="53"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="53"><b class="fc">&nbsp;        <span class="hljs-keyword">int</span> m = pattern.length();</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="54"><div class="hljs-ln-n" data-line-number="54"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="54">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="55"><div class="hljs-ln-n" data-line-number="55"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="55"><b class="fc">&nbsp;        <span class="hljs-keyword">int</span>[] lps_array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[m];</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="56"><div class="hljs-ln-n" data-line-number="56"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="56"><b class="fc">&nbsp;        lps_array[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="57"><div class="hljs-ln-n" data-line-number="57"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="57">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="58"><div class="hljs-ln-n" data-line-number="58"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="58"><b class="fc">&nbsp;        <span class="hljs-keyword">int</span> suffix_length = <span class="hljs-number">0</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="59"><div class="hljs-ln-n" data-line-number="59"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="59"><b class="fc">&nbsp;        <span class="hljs-keyword">int</span> index = <span class="hljs-number">1</span>;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="60"><div class="hljs-ln-n" data-line-number="60"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="60">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="61"><div class="hljs-ln-n" data-line-number="61"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="61"><b class="fc">&nbsp;        <span class="hljs-keyword">while</span> (index &lt; m) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="62"><div class="hljs-ln-n" data-line-number="62"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="62"><b class="fc">&nbsp;            <span class="hljs-keyword">if</span> (pattern.charAt(index) == pattern.charAt(suffix_length)) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="63"><div class="hljs-ln-n" data-line-number="63"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="63"><b class="fc">&nbsp;                suffix_length++;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="64"><div class="hljs-ln-n" data-line-number="64"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="64"><b class="fc">&nbsp;                lps_array[index] = suffix_length;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="65"><div class="hljs-ln-n" data-line-number="65"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="65"><b class="fc">&nbsp;                index++;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="66"><div class="hljs-ln-n" data-line-number="66"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="66">&nbsp;            }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="67"><div class="hljs-ln-n" data-line-number="67"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="67">&nbsp;            <span class="hljs-keyword">else</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="68"><div class="hljs-ln-n" data-line-number="68"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="68">&nbsp;            {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="69"><div class="hljs-ln-n" data-line-number="69"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="69"><b class="fc">&nbsp;                <span class="hljs-keyword">if</span> (suffix_length != <span class="hljs-number">0</span>) {</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="70"><div class="hljs-ln-n" data-line-number="70"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="70"><b class="nc">&nbsp;                    suffix_length = lps_array[suffix_length - <span class="hljs-number">1</span>];</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="71"><div class="hljs-ln-n" data-line-number="71"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="71">&nbsp;                }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="72"><div class="hljs-ln-n" data-line-number="72"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="72">&nbsp;                <span class="hljs-keyword">else</span> {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="73"><div class="hljs-ln-n" data-line-number="73"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="73"><b class="fc">&nbsp;                    lps_array[index] = suffix_length;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="74"><div class="hljs-ln-n" data-line-number="74"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="74"><b class="fc">&nbsp;                    index++;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="75"><div class="hljs-ln-n" data-line-number="75"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="75">&nbsp;                }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="76"><div class="hljs-ln-n" data-line-number="76"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="76">&nbsp;            }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="77"><div class="hljs-ln-n" data-line-number="77"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="77">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="78"><div class="hljs-ln-n" data-line-number="78"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="78">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="79"><div class="hljs-ln-n" data-line-number="79"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="79"><b class="fc">&nbsp;        <span class="hljs-keyword">return</span> lps_array;</b></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="80"><div class="hljs-ln-n" data-line-number="80"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="80">&nbsp;    }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="81"><div class="hljs-ln-n" data-line-number="81"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="81">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="82"><div class="hljs-ln-n" data-line-number="82"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="82">&nbsp;    <span class="hljs-meta">@Generated</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="83"><div class="hljs-ln-n" data-line-number="83"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="83">&nbsp;    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="84"><div class="hljs-ln-n" data-line-number="84"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="84">&nbsp;    {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="85"><div class="hljs-ln-n" data-line-number="85"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="85">&nbsp;        <span class="hljs-comment">// exemplu:</span></td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="86"><div class="hljs-ln-n" data-line-number="86"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="86">&nbsp;</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="87"><div class="hljs-ln-n" data-line-number="87"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="87">&nbsp;        <span class="hljs-keyword">int</span>[] result = KMP.findAllOccurrences(<span class="hljs-string">"dsx"</span>, <span class="hljs-string">"dsxdfafefaedsxeraedsx"</span>);</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="88"><div class="hljs-ln-n" data-line-number="88"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="88">&nbsp;        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index : result) {</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="89"><div class="hljs-ln-n" data-line-number="89"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="89">&nbsp;            System.out.println(index);</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="90"><div class="hljs-ln-n" data-line-number="90"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="90">&nbsp;        }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="91"><div class="hljs-ln-n" data-line-number="91"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="91">&nbsp;    }</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="92"><div class="hljs-ln-n" data-line-number="92"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="92">&nbsp;}</td></tr><tr><td class="hljs-ln-line hljs-ln-numbers" data-line-number="93"><div class="hljs-ln-n" data-line-number="93"></div></td><td class="hljs-ln-line hljs-ln-code" data-line-number="93">&nbsp;</td></tr></tbody></table></code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-11-14 22:38</div>
+</div>
+
+
+</body></html>
