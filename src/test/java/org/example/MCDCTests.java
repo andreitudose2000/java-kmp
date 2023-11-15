@@ -41,7 +41,7 @@ public class MCDCTests {
     }
 
     @Test
-    void MCDC39() {
+    void MCDC39_Conditions() {
         assertDoesNotThrow(() -> {
             var response = KMP.findAllOccurrences("aefafefeefra", "fra");
 
@@ -77,7 +77,7 @@ public class MCDCTests {
     }
 
     @Test
-    void MCDC39_False() {
+    void MCDC62_True() {
         assertDoesNotThrow(() -> {
             var response = KMP.findAllOccurrences("ABABXABABDABABCABAB", "ABABCABAB");
 
