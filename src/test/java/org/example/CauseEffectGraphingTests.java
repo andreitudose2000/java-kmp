@@ -1,48 +1,48 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class CauseEffectGraphingTests {
     @Test
-    void CauseEffectGraph1() {
-        assertDoesNotThrow(() -> {
-            var response = KMP.findAllOccurrences("abcacbac", "ac");
+    public void CauseEffectGraph1() {
 
-            assertNotNull(response);
-            assertArrayEquals(new int[] { 3, 6 }, response);
-        });
+        int[] response = new KMP().findAllOccurrences("abcacbac", "ac");
+
+        assertNotNull(response);
+        assertArrayEquals(new int[] { 3, 6 }, response);
+
     }
 
     @Test
-    void CauseEffectGraph2() {
-        assertDoesNotThrow(() -> {
-            var response = KMP.findAllOccurrences("bcacabcb", "ba");
+    public void CauseEffectGraph2() {
 
-            assertNotNull(response);
-            assertEquals(0, response.length);
-        });
+        int[] response = new KMP().findAllOccurrences("bcacabcb", "ba");
+
+        assertNotNull(response);
+        assertEquals(0, response.length);
+
     }
 
-    @Test
-    void CauseEffectGraph3() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences(null,  null);
-        });
+    @Test(expected = IllegalArgumentException.class)
+    public void CauseEffectGraph3() {
+
+        new KMP().findAllOccurrences(null,  null);
+
     }
 
-    @Test
-    void CauseEffectGraph4() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences("abccab",  null);
-        });
+    @Test(expected = IllegalArgumentException.class)
+    public void CauseEffectGraph4() {
+
+        new KMP().findAllOccurrences("abccab",  null);
+
     }
 
-    @Test
-    void CauseEffectGraph5() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences(null, "bca");
-        });
+    @Test(expected = IllegalArgumentException.class)
+    public void CauseEffectGraph5() {
+
+        new KMP().findAllOccurrences(null, "bca");
+
     }
 }

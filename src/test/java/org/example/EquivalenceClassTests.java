@@ -1,53 +1,57 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class EquivalenceClassTests {
     @Test
-    void EquivalenceClass1() {
-        assertDoesNotThrow(() -> {
-            var response = KMP.findAllOccurrences("xyxxzyxzy", "xx");
+    public void EquivalenceClass1() {
 
-            assertNotNull(response);
-            assertEquals(1, response.length);
-            assertEquals(2, response[0]);
-        });
+        int[] response = new KMP().findAllOccurrences("xyxxzyxzy", "xx");
+
+        assertNotNull(response);
+        assertEquals(1, response.length);
+        assertEquals(2, response[0]);
+
     }
 
     @Test
-    void EquivalenceClass2() {
-        assertDoesNotThrow(() -> {
-            var response = KMP.findAllOccurrences("xyxxzyxzy", "zy");
+    public void EquivalenceClass2() {
 
-            assertNotNull(response);
-            assertArrayEquals(new int[] { 4, 7 }, response);
-        });
+        int[] response = new KMP().findAllOccurrences("xyxxzyxzy", "zy");
+
+        assertNotNull(response);
+        assertArrayEquals(new int[] { 4, 7 }, response);
+
     }
 
     @Test
-    void EquivalenceClass3() {
-        assertDoesNotThrow(() -> {
-            var response = KMP.findAllOccurrences("xyxxzyxzy", "zyz");
+    public void EquivalenceClass3() {
 
-            assertNotNull(response);
-            assertEquals(0, response.length);
-        });
+        int[] response = new KMP().findAllOccurrences("xyxxzyxzy", "zyz");
+
+        assertNotNull(response);
+        assertEquals(0, response.length);
+
     }
 
-    @Test
-    void EquivalenceClass4() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences("xxzxzy",  null);
-        });
+    @Test(expected = IllegalArgumentException.class)
+    public void EquivalenceClass4Test1() {
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences(null,  "xy");
-        });
+        new KMP().findAllOccurrences("xxzxzy",  null);
+    }
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            KMP.findAllOccurrences(null,  null);
-        });
+    @Test(expected = IllegalArgumentException.class)
+    public void EquivalenceClass4Test2() {
+
+        new KMP().findAllOccurrences(null, "xy");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void EquivalenceClass4Test3() {
+
+        new KMP().findAllOccurrences(null,  null);
+
     }
 }

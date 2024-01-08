@@ -1,11 +1,9 @@
 package org.example;
 
-import lombok.Generated;
-
 import java.util.ArrayList;
 
 public class KMP {
-    public static int[] findAllOccurrences(String text, String pattern)
+    public int[] findAllOccurrences(String text, String pattern)
     {
         if (text == null) {
             throw new IllegalArgumentException("Text can not be null");
@@ -14,16 +12,16 @@ public class KMP {
             throw new IllegalArgumentException("Pattern can not be null");
         }
 
-        var m = pattern.length();
-        var n = text.length();
+        int m = pattern.length();
+        int n = text.length();
 
         if (m == 0 || n == 0 || m > n) {
             return new int[0];
         }
 
-        var lpsArray = getLPSArray(pattern);
+        int[] lpsArray = getLPSArray(pattern);
 
-        var foundAt = new ArrayList<Integer>();
+        ArrayList<Integer> foundAt = new ArrayList<Integer>();
 
         int textIndex = 0, patternIndex = 0;
         while ((m - patternIndex) <= (n - textIndex)) {
@@ -49,7 +47,7 @@ public class KMP {
         return foundAt.stream().mapToInt(Number::intValue).toArray();
     }
 
-    private static int[] getLPSArray(String pattern) {
+    private int[] getLPSArray(String pattern) {
         int m = pattern.length();
 
         int[] lps_array = new int[m];
@@ -79,15 +77,14 @@ public class KMP {
         return lps_array;
     }
 
-    @Generated
-    public static void main(String[] args)
-    {
-        // exemplu:
-
-        int[] result = KMP.findAllOccurrences("dsx", "dsxdfafefaedsxeraedsx");
-        for (int index : result) {
-            System.out.println(index);
-        }
-    }
+//    public static void main(String[] args)
+//    {
+//        // exemplu:
+//
+//        int[] result = KMP.findAllOccurrences("dsx", "dsxdfafefaedsxeraedsx");
+//        for (int index : result) {
+//            System.out.println(index);
+//        }
+//    }
 }
 
