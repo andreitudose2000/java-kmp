@@ -6,30 +6,19 @@
         <fullNameOfTestSuite>org.example.KMP_ESTest</fullNameOfTestSuite>
         <generation>
             <id>0</id>
-            <failed>true</failed>
-            <modified>true</modified>
-            <timeBudgetInSeconds>120</timeBudgetInSeconds>
-            <memoryInMB>800</memoryInMB>
-            <std_err_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_31_30\logs\org.example.KMP\std_err_CLIENT.log</std_err_CLIENT>
-            <std_out_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_31_30\logs\org.example.KMP\std_out_CLIENT.log</std_out_CLIENT>
-            <std_err_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_31_30\logs\org.example.KMP\std_err_MASTER.log</std_err_MASTER>
-            <std_out_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_31_30\logs\org.example.KMP\std_out_MASTER.log</std_out_MASTER>
-        </generation>
-        <generation>
-            <id>1</id>
             <failed>false</failed>
             <modified>true</modified>
             <timeBudgetInSeconds>120</timeBudgetInSeconds>
             <memoryInMB>800</memoryInMB>
-            <std_err_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_32_33\logs\org.example.KMP\std_err_CLIENT.log</std_err_CLIENT>
-            <std_out_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_32_33\logs\org.example.KMP\std_out_CLIENT.log</std_out_CLIENT>
-            <std_err_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_32_33\logs\org.example.KMP\std_err_MASTER.log</std_err_MASTER>
-            <std_out_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_32_33\logs\org.example.KMP\std_out_MASTER.log</std_out_MASTER>
+            <std_err_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_09_17_26_41\logs\org.example.KMP\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_09_17_26_41\logs\org.example.KMP\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_09_17_26_41\logs\org.example.KMP\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_09_17_26_41\logs\org.example.KMP\std_out_MASTER.log</std_out_MASTER>
             <suite>
-                <fullPathOfTestSuite>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_08_19_32_33\tests\org\example\KMP_ESTest.java</fullPathOfTestSuite>
-                <numberOfTests>7</numberOfTests>
-                <totalNumberOfStatements>14</totalNumberOfStatements>
-                <totalEffortInSeconds>76</totalEffortInSeconds>
+                <fullPathOfTestSuite>D:\cod\Facultate\java-kmp\.evosuite\tmp_2024_01_09_17_26_41\tests\org\example\KMP_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>9</numberOfTests>
+                <totalNumberOfStatements>18</totalNumberOfStatements>
+                <totalEffortInSeconds>81</totalEffortInSeconds>
                 <coverage>
                     <criterion>LineCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
