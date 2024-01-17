@@ -59,6 +59,20 @@
                 <artifactId>evosuite-maven-plugin</artifactId>
                 <version>1.0.6</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>1.8.1</version>
+                <configuration>
+                    <targetClasses>
+                        <param>org.example*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>org.example*</param>
+                    </targetTests>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
